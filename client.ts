@@ -49,6 +49,6 @@ transactionSignature = await sendAndConfirmTransaction(
 );
 
 console.log(
-  "\nCreate Mint Account:",
+  "\nTransfer Signature:",
   `https://solana.fm/tx/${transactionSignature}?cluster=devnet-solana`
 );
