@@ -23,11 +23,11 @@ const toAccount = toAccountKeypair.publicKey;
 let transactionSignature: string;
 
 const modifyComputeUnits = ComputeBudgetProgram.setComputeUnitLimit({
-  units: 450,
+  units: 5000,
 });
 
 const addPriorityFee = ComputeBudgetProgram.setComputeUnitPrice({
-  microLamports: 1200000,
+  microLamports: 12000,
 });
 
 const transaction = new Transaction()
