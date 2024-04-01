@@ -22,12 +22,12 @@ const toAccount = toAccountKeypair.publicKey;
 // Transaction signature returned from sent transaction
 let transactionSignature: string;
 
-const modifyComputeUnits = ComputeBudgetProgram.setComputeUnitLimit({
-  units: 5000,
+const addPriorityFee = ComputeBudgetProgram.setComputeUnitPrice({
+  microLamports: 20_000_000,
 });
 
-const addPriorityFee = ComputeBudgetProgram.setComputeUnitPrice({
-  microLamports: 12000,
+const modifyComputeUnits = ComputeBudgetProgram.setComputeUnitLimit({
+  units: 90_000,
 });
 
 const transaction = new Transaction()
